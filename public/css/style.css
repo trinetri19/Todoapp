@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&display=swap');
+*{
+    font-family:cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.container{
+    flex:1;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://i.pinimg.com/originals/ac/54/a1/ac54a128942c750799c2c1fe144d2467.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-color: #9784ec !important;
+}
+
+.navbar{
+ background-color: #a393eb !important;
+ height:4.5rem !important;
+}
+a{
+    color:white !important;
+}
+.navbar-brand{
+    font-size: 1.9rem !important;
+}
+.navbar-nav{
+    font-size: 1.3rem !important; 
+}
+.form-label{
+    font-size: 1.5rem !important;
+}
+
+.btn{
+    background-color: #8971d0 !important;
+    padding:0.5rem 1rem !important;
+    color: antiquewhite !important;
+    font-size: 1.3rem !important;
+}
+.btn:hover{
+    border: 2px solid #836ce9 !important;
+}
+.alert{
+    background-color: #836ce9 !important;
+    font-size: 1.5rem !important;
+}
+.del-btn{
+    padding: 0.2rem 0.4rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 50% !important;
+    margin: 0rem 2rem !important; 
+}
+.form-del{
+    display: inline !important;
+}
+
+
+.f-info-links a {
+    color: #222222;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-socials,
+.f-info-links {
+    width: 100%;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin: 4px !important;
+}
+
+.f-info-about p {
+    margin: 0px !important;
+    font-size: 0.9rem;
+}
+
+.f-info {
+    display: flex;
+    background-color: #9784ec;
+    min-height: 3rem;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3rem;
+}

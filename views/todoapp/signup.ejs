@@ -1,0 +1,19 @@
+<%  layout("/layouts/boilerplate")%>
+
+<div class="row">
+    <div class="col-6 offset-2 offset-sm-2 offset-md-2 offset-lg-4 mt-3">
+        <h2 class="offset-3">Sign Up Here !!</h2>
+        <form action="/signup" method="POST">
+            <label for="email" class="form-label">Email:</label>
+            <input type="text" name="email" class="form-control" id="email">
+
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" name="username" class="form-control" id="username">
+
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" name="password" class="form-control" id="password">
+
+            <button class="btn mt-3 offset-4">Sign Up</button>
+        </form>
+    </div>
+</div>
