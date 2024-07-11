@@ -95,14 +95,14 @@ app.post("/signup", async (req,res)=>{
     }
 })
 
-app.post("/login",(req,res)=>{
-    passport.authenticate("local",{
-        failureRedirect:"/login",
-        failureFlash:true
-    })
+app.post('/login', passport.authenticate('local', {
+    failureRedirect: '/login',
+    failureFlash: true
+}), (req, res) => {
     req.flash("success","You are Logged in")
-    res.redirect("/todo")
-})
+    res.redirect('/todo');
+});
+
 
 app.get("/logout",(req,res)=>{
     req.logout((err)=>{
@@ -115,14 +115,16 @@ app.get("/logout",(req,res)=>{
 })
 
 app.get("/todo", async (req,res)=>{
-    let allTask = await Todo.find({})
+    let allTask = await Todo.find({}).populate("user")
 res.render("todoapp/home.ejs",{allTask})
 })
 
 app.post("/todo/create",isLoggedIn,async (req,res)=>{
     let {task} = req.body
-    let addTask = new Todo({task})
-    addTask.user = req.user._id
+    let addTask = new Todo({
+        task,
+        user: req.user._id 
+    });
     await  addTask.save()
     res.redirect("/todo")
 })

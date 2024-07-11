@@ -1,6 +1,20 @@
 <%  layout("/layouts/boilerplate")%>
+<style>
+    @media(max-width:600px){
+        .col-6{
+            width:20rem !important;
+        }
+    }
+
+    @media(min-width:600px)and (max-width:1500px){
+        .col-6{
+            width:30rem !important;
+        }
+    }
+</style>
+
 <div class="row">
-    <div class="col-6 offset-2 offset-sm-2 offset-md-3 offset-lg-6 mt-5">
+    <div class="col-6 offset-2 offset-sm-1 offset-md-1 offset-lg-6 mt-5">
         <form action="/todo/create" method="POST" >
             <input type="text" placeholder="Enter Your Task" class="form-control" name="task">
             <button class="btn mt-3">Add</button>
@@ -9,8 +23,9 @@
         <div class="card mt-3">
             <div class="card-body">
                    <h5> Your Tasks</h5>
-                   <%#if(currentUser && currentUser.equals(allTask.user)){%>
+                     <%#if(currentUser && currentUser.equals(allTask.user)){%>
                    <% for(task of allTask){%>
+                   
                    <p class="card-text">
                     <li>Task : <%= task.task%>
                          <form action="/todo/<%= task._id%>?_method=DELETE" method="POST" class="form-del">

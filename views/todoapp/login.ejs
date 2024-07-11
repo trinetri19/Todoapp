@@ -1,5 +1,18 @@
 <%  layout("/layouts/boilerplate")%>
 
+<style>
+    @media(max-width:600px){
+        .col-6{
+            width:20rem !important;
+        }
+    }
+
+    @media(min-width:600px)and (max-width:1500px){
+        .col-6{
+            width:30rem !important;
+        }
+    }
+</style>
 
 <div class="row">
     <div class="col-6 offset-2  offset-sm-2 offset-md-3 offset-lg-4">
@@ -7,8 +20,8 @@
         <form action="/login" method ="POST">
             <label for="username" class="form-label">Username:</label>
             <input type="text" name="username" class="form-control">
-            <label for="Password" class="form-label">Password:</label>
-            <input type="password" name="Password" class="form-control">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" name="password" class="form-control">
             <button class="btn mt-4 offset-5">Login</button>
         </form>
     </div>
